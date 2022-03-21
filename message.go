@@ -165,7 +165,7 @@ func (v *Viber) NewFileMessage(msg string, url string, size uint, filename strin
 	return &FileMessage{
 		TextMessage: TextMessage{
 			Sender: v.Sender, 
-			Type: TypeVideoMessage,
+			Type: TypeFileMessage,
 			Text: msg,
 		},
 		Media: url,
