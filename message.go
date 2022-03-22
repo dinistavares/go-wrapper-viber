@@ -122,6 +122,16 @@ func (v *Viber) NewTextMessage(msg string) *TextMessage {
 	}
 }
 
+// NewTextMessageWithKeyboard 
+func (v *Viber) NewTextMessageWithKeyboard(msg string, keyboard Keyboard) *TextMessage{
+	return &TextMessage{
+		Sender: v.Sender,
+		Type: TypeTextMessage,
+		Text: msg,
+		Keyboars: &keyboard,
+	}
+}
+
 // NewURLMessage creates new message with global sender and common params set
 func (v *Viber) NewURLMessage(msg string, url string) *URLMessage {
 	return &URLMessage{
